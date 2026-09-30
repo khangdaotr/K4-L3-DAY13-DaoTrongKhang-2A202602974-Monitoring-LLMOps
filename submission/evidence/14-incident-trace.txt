@@ -1,0 +1,8 @@
+Trace ID: d1d1439804172869207e3722e98113db
+Correlation ID: req-7c5b8fa6
+
+lab-agent-run (AGENT, id=c803065ac0994858)
+|- retrieval (RETRIEVER, id=c8e7d4ac2e782b99)
+`- generation (GENERATION, id=82f0bcbe8e9d7092)
+
+The request log records 2652 ms total latency with stable 50 ms TTFT and no error. The released challenge enables rag_slow; the retrieval child is therefore the affected span, while generation behavior remains normal.

@@ -1,0 +1,9 @@
+Promote: production -> version 2
+Verification trace: 56393eff993a5ceeb26a6a2a4435faa4 (prompt_label=production, prompt_version=2)
+
+Rollback: production -> version 1
+Verification trace: 2ff1f4bb021ea1074bf9466a7d3a0ca4 (prompt_label=production, prompt_version=1)
+
+Final labels:
+v1: baseline, production
+v2: candidate, latest

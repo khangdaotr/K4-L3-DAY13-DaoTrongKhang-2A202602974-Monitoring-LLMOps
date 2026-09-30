@@ -1,0 +1,4 @@
+Langfuse prompt: day13-chat (text)
+Version 1 labels after rollback: baseline, production
+Version 2 labels after rollback: candidate, latest
+Variables preserved: {{feature}}, {{docs}}, {{message}}

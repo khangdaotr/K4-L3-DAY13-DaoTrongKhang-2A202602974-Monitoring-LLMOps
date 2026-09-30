@@ -22,39 +22,48 @@ Ví dụ dưới đây minh họa mức độ cụ thể cần có. Học viên 
 
 ## Alert 1
 
-- Tên:
-- Severity:
-- Duration:
-- Kênh thông báo: Slack
-- SLI/SLO liên quan:
-- Điều kiện và thời gian duy trì:
-- Ảnh hưởng tới người dùng:
+- Tên: `HighLatencyP95`
+- Severity: `warning`
+- Duration: `5m`
+- Kênh thông báo: Slack `#k4-l3b-alerts`
+- SLI/SLO liên quan: P95 của `response_sent.latency_ms`, ngưỡng SLO 3000 ms.
+- Điều kiện và thời gian duy trì: `p95(latency_ms) > 3000ms` liên tục 5 phút.
+- Ảnh hưởng tới người dùng: Người dùng phải chờ lâu hơn trước khi nhận câu trả lời.
 - Ba bước kiểm tra đầu tiên:
-- Mitigation tạm thời:
-- Owner:
+  1. Xác nhận P50/P95/P99 và thời điểm tăng trên panel Latency.
+  2. Lọc log trong khoảng đó và lấy `correlation_id` của request chậm.
+  3. Mở trace cùng ID, so sánh thời gian child `retrieval` và `generation`.
+- Mitigation tạm thời: Tắt practice incident nếu đang bật; rollback prompt nếu generation tăng sau đổi version; giảm tải trong lúc điều tra.
+- Owner: `student-2A202602974`
 
 ## Alert 2
 
-- Tên:
-- Severity:
-- Duration:
-- Kênh thông báo: Slack
-- SLI/SLO liên quan:
-- Điều kiện và thời gian duy trì:
-- Ảnh hưởng tới người dùng:
+- Tên: `HighErrorRate`
+- Severity: `critical`
+- Duration: `5m`
+- Kênh thông báo: Slack `#k4-l3b-alerts`
+- SLI/SLO liên quan: Tỷ lệ `request_failed / request_received`, guardrail tối đa 2%.
+- Điều kiện và thời gian duy trì: `error_rate_pct > 2` liên tục 5 phút.
+- Ảnh hưởng tới người dùng: Một phần request không nhận được câu trả lời thành công.
 - Ba bước kiểm tra đầu tiên:
-- Mitigation tạm thời:
-- Owner:
+  1. Xác nhận error rate và retrieval success trên panel Errors.
+  2. Lọc `request_failed`, nhóm theo `error_type`, lấy một `correlation_id` đại diện.
+  3. Mở trace tương ứng để xác định child observation lỗi và thông báo trạng thái.
+- Mitigation tạm thời: Tắt incident/tool bị lỗi, dùng fallback an toàn và rollback thay đổi gần nhất.
+- Owner: `student-2A202602974`
 
 ## Alert 3
 
-- Tên:
-- Severity:
-- Duration:
-- Kênh thông báo: Slack
-- SLI/SLO liên quan:
-- Điều kiện và thời gian duy trì:
-- Ảnh hưởng tới người dùng:
+- Tên: `LowAnswerQuality`
+- Severity: `warning`
+- Duration: `10m`
+- Kênh thông báo: Slack `#k4-l3b-alerts`
+- SLI/SLO liên quan: Trung bình `response_sent.quality_score`, guardrail tối thiểu 0.75.
+- Điều kiện và thời gian duy trì: `avg(quality_score) < 0.75` liên tục 10 phút.
+- Ảnh hưởng tới người dùng: Câu trả lời có dấu hiệu kém liên quan hoặc thiếu thông tin.
 - Ba bước kiểm tra đầu tiên:
-- Mitigation tạm thời:
-- Owner:
+  1. Xác nhận thời điểm quality giảm trên panel Quality và đối chiếu Tokens/Cost.
+  2. Lọc log `response_sent` có quality thấp, lấy `correlation_id` và prompt label.
+  3. Mở trace để kiểm tra retrieval context, prompt version và generation usage.
+- Mitigation tạm thời: Rollback label `production` về prompt baseline và theo dõi lại quality.
+- Owner: `student-2A202602974`

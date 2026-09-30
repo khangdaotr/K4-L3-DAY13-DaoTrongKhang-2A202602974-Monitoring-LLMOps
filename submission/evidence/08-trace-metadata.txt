@@ -1,0 +1,9 @@
+Trace ID: d81392944601b16e567f9c21be2f8363
+correlation_id=req-ad0594b4
+prompt_name=day13-chat
+prompt_label=baseline
+prompt_version=1
+prompt_source=langfuse
+model=claude-sonnet-4-5
+Generation input/output capture: disabled
+Generation records usage_details, cost_details and managed prompt through update_current_generation.

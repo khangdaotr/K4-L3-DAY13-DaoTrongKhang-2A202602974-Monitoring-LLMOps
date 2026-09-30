@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920">
+<rect width="1400" height="920" fill="#07111f"/>
+<text x="60" y="60" fill="#f8fafc" font-family="Segoe UI" font-size="30" font-weight="700">K4-L3B Monitoring &amp; LLMOps</text>
+<text x="60" y="91" fill="#94a3b8" font-family="Segoe UI" font-size="16">Last 60 minutes · refresh 30s · generated 2026-09-30T15:19:42+00:00</text>
+<rect x="60" y="130" width="620" height="210" rx="16" fill="#111c2e" stroke="#26364d"/>
+<text x="85" y="168" fill="#f8fafc" font-family="Segoe UI" font-size="22" font-weight="600">Latency</text>
+<text x="85" y="200" fill="#cbd5e1" font-family="Segoe UI" font-size="15">P50 152 ms · P95 2653 ms · P99 2653 ms · TTFT P95 50 ms</text>
+<line x1="85" y1="275" x2="655" y2="275" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 6"/>
+<polyline points="85.0,277.2 120.6,305.0 156.2,305.0 191.9,305.0 227.5,304.9 263.1,305.0 298.8,305.0 334.4,305.0 370.0,304.9 405.6,305.0 441.2,223.0 476.9,223.0 512.5,223.0 548.1,223.0 583.8,223.0 619.4,305.0 655.0,305.0" fill="none" stroke="#60a5fa" stroke-width="3"/>
+<text x="85" y="326" fill="#fbbf24" font-family="Segoe UI" font-size="13">threshold: P95 ≤ 3000 ms</text>
+<rect x="730" y="130" width="620" height="210" rx="16" fill="#111c2e" stroke="#26364d"/>
+<text x="755" y="168" fill="#f8fafc" font-family="Segoe UI" font-size="22" font-weight="600">Traffic</text>
+<text x="755" y="200" fill="#cbd5e1" font-family="Segoe UI" font-size="15">17 requests · 3 active minutes</text>
+<line x1="755" y1="275" x2="1325" y2="275" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 6"/>
+<polyline points="755.0,223.0 1040.0,274.2 1325.0,305.0" fill="none" stroke="#60a5fa" stroke-width="3"/>
+<text x="755" y="326" fill="#fbbf24" font-family="Segoe UI" font-size="13">threshold: ≥ 1 request/min</text>
+<rect x="60" y="380" width="620" height="210" rx="16" fill="#111c2e" stroke="#26364d"/>
+<text x="85" y="418" fill="#f8fafc" font-family="Segoe UI" font-size="22" font-weight="600">Errors</text>
+<text x="85" y="450" fill="#cbd5e1" font-family="Segoe UI" font-size="15">Error rate 0.0% · Retrieval success 100.0%</text>
+<line x1="85" y1="525" x2="655" y2="525" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 6"/>
+<polyline points="85.0,555.0 655.0,473.0" fill="none" stroke="#60a5fa" stroke-width="3"/>
+<text x="85" y="576" fill="#fbbf24" font-family="Segoe UI" font-size="13">threshold: errors ≤ 2%</text>
+<rect x="730" y="380" width="620" height="210" rx="16" fill="#111c2e" stroke="#26364d"/>
+<text x="755" y="418" fill="#f8fafc" font-family="Segoe UI" font-size="22" font-weight="600">Cost</text>
+<text x="755" y="450" fill="#cbd5e1" font-family="Segoe UI" font-size="15">Total $0.0336</text>
+<line x1="755" y1="525" x2="1325" y2="525" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 6"/>
+<polyline points="755.0,473.0 1040.0,531.7 1325.0,555.0" fill="none" stroke="#60a5fa" stroke-width="3"/>
+<text x="755" y="576" fill="#fbbf24" font-family="Segoe UI" font-size="13">threshold: total ≤ $2.50</text>
+<rect x="60" y="630" width="620" height="210" rx="16" fill="#111c2e" stroke="#26364d"/>
+<text x="85" y="668" fill="#f8fafc" font-family="Segoe UI" font-size="22" font-weight="600">Tokens</text>
+<text x="85" y="700" fill="#cbd5e1" font-family="Segoe UI" font-size="15">Input 570 · Output 2126</text>
+<line x1="85" y1="775" x2="655" y2="775" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 6"/>
+<polyline points="85.0,762.1 120.6,746.3 156.2,724.9 191.9,788.2 227.5,783.6 263.1,775.2 298.8,723.0 334.4,746.3 370.0,764.9 405.6,745.4 441.2,805.0 476.9,787.3 512.5,774.2 548.1,765.9 583.8,795.7 619.4,802.2 655.0,776.1" fill="none" stroke="#60a5fa" stroke-width="3"/>
+<text x="85" y="826" fill="#fbbf24" font-family="Segoe UI" font-size="13">threshold: total ≤ 50,000</text>
+<rect x="730" y="630" width="620" height="210" rx="16" fill="#111c2e" stroke="#26364d"/>
+<text x="755" y="668" fill="#f8fafc" font-family="Segoe UI" font-size="22" font-weight="600">Quality</text>
+<text x="755" y="700" fill="#cbd5e1" font-family="Segoe UI" font-size="15">Average 0.86</text>
+<line x1="755" y1="775" x2="1325" y2="775" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 6"/>
+<polyline points="755.0,723.0 790.6,805.0 826.2,805.0 861.9,723.0 897.5,723.0 933.1,723.0 968.8,723.0 1004.4,723.0 1040.0,723.0 1075.6,723.0 1111.2,805.0 1146.9,805.0 1182.5,723.0 1218.1,723.0 1253.8,805.0 1289.4,805.0 1325.0,805.0" fill="none" stroke="#60a5fa" stroke-width="3"/>
+<text x="755" y="826" fill="#fbbf24" font-family="Segoe UI" font-size="13">threshold: average ≥ 0.75</text>
+</svg>

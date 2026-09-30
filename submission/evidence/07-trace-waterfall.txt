@@ -1,0 +1,6 @@
+Trace ID: d81392944601b16e567f9c21be2f8363
+Correlation ID: req-ad0594b4
+
+lab-agent-run (AGENT, id=73a3255cd485f56b)
+|- retrieval (RETRIEVER, id=bfb361a0ed17a6aa, parent=73a3255cd485f56b)
+`- generation (GENERATION, id=af034410ab5292ef, parent=73a3255cd485f56b)

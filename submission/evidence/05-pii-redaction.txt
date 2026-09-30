@@ -1,0 +1,7 @@
+Request ID: req-e5f6a7b8
+Test message contained synthetic email, VN phone, CCCD and credit-card patterns.
+
+Sanitized request_received payload:
+{"message_preview":"[REDACTED_EMAIL] [REDACTED_PHONE_VN] [REDACTED_CCCD] [REDACTED_CREDIT_CARD]"}
+
+Validator result: Potential PII leaks detected: 0

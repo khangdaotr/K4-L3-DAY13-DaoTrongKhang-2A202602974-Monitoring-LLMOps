@@ -1,0 +1,4 @@
+Source: Langfuse Observations API v2, personal project.
+Observed at least 14 complete traces in a 15-minute window.
+Each complete trace contains: lab-agent-run, retrieval, generation.
+Input/output capture is disabled by decorators.

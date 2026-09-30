@@ -1,0 +1,8 @@
+Request: POST /chat, x-request-id=req-a1b2c3d4
+Response: 200, x-request-id=req-a1b2c3d4, x-response-time-ms=162.59
+
+request_received:
+{"ts":"2026-09-30T15:13:49.299934Z","event":"request_received","correlation_id":"req-a1b2c3d4","user_id_hash":"2a97516c354b","session_id":"demo-structured","feature":"qa","model":"claude-sonnet-4-5","env":"dev"}
+
+response_sent:
+{"ts":"2026-09-30T15:13:49.458798Z","event":"response_sent","correlation_id":"req-a1b2c3d4","user_id_hash":"2a97516c354b","session_id":"demo-structured","feature":"qa","model":"claude-sonnet-4-5","env":"dev","latency_ms":152,"ttft_ms":50,"tokens_in":24,"tokens_out":89,"cost_usd":0.001407,"quality_score":0.8,"tool_success":true}

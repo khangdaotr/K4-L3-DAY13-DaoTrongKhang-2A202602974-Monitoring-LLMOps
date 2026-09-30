@@ -1,0 +1,16 @@
+Challenge: day13-k4-l3b-monitoring-llmops-v1
+Metric source: server-side latency_ms from data/logs.jsonl
+
+Baseline window: 2026-09-30T15:10:02.742513Z to 2026-09-30T15:10:04.184991Z
+Baseline requests: 10
+Baseline latency P50: 152 ms
+Baseline latency P95: 1000 ms (includes first-request prompt/cache cold start)
+Baseline TTFT P95: 50 ms
+
+Incident window: 2026-09-30T15:11:39.169937Z to 2026-09-30T15:11:52.460693Z
+Incident requests: 5
+Incident latency range: 2652-2653 ms
+Incident latency P50/P95: 2652/2653 ms
+Incident TTFT P95: 50 ms
+
+Conclusion: latency crossed the 2000 ms challenge threshold while TTFT and error rate remained stable.

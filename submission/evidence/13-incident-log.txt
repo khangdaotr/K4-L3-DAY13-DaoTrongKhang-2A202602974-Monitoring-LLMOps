@@ -1,0 +1,4 @@
+Challenge request selected for investigation:
+{"ts":"2026-09-30T15:11:41.823352Z","event":"response_sent","correlation_id":"req-7c5b8fa6","session_id":"k4-l3b-challenge-s05","feature":"monitoring","latency_ms":2652,"ttft_ms":50,"tool_name":"retrieval","tool_success":true,"error_type":null}
+
+The 2652 ms server-side latency exceeds the challenge threshold of 2000 ms.
